@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/game_bg.jpg') center no-repeat;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(241, 241, 241);
+    
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(22, 22, 22, 0.35);
+    margin-right: 10px;
+}
+
+.profile {
+    width: 100%;
+    height: 8%;
+    background-color: rgba(18, 75, 18, 0.35);
+}
+
+.chat {
+    width: 100%;
+    background-color: rgb(238, 189, 55);
+    height: 84%;
+}
+
+.menu {
+    height: 8%;
+    background-color: rgba(22, 22, 22, 0.541);
+}
+
+.game {
+    height: 100vh;
+    float: right;
+    width: 79%;
+}
+
+.game_main {
+    width: 100%;
+    height: 92%;
+    background-color: rgba(31, 34, 204, 0.35);
+}
+
+.game_items {
+    height: 8%;
+    background-color: rgba(31, 177, 109, 0.541);
+}

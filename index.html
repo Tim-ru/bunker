@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunker</title>
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header_inner">
+        <div class="header_logo">Bunker</div>
+        <nav class="nav">
+          <button class="reg" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+            <span class="button_text">Регистрация</span>
+          </button>
+          <button class="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+            <span class="button_text">Вход</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Окно регистрации -->
+  
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <img src="public/img/logo.png" alt="Avatar" class="avatar">
+      </div>
+
+      <span class="auth">Регистрация</span>
+
+      <div class="container">
+
+        <div class="username">
+          <label id="lab" for="uname"><img id="user_img" src="public/img/user.png" alt=""></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+
+        <div class="password">
+          <label id="pas" for="psw"><img id="password_img" src="public/img/password.png" alt=""></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+
+        <div class="user_login">
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Запомнить
+          </label>
+          <button class="log_button" type="submit">Войти</button>
+        </div>
+
+        <div class="nav">
+          
+        </div>
+
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Окно авторизации -->
+  
+  <div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <img src="public/img/logo.png" alt="Avatar" class="avatar">
+      </div>
+
+      <span class="auth">Авторизация</span>
+
+      <div class="container">
+
+        <div class="username">
+          <label id="lab" for="uname"><img id="user_img" src="public/img/user.png" alt=""></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+
+        <div class="password">
+          <label id="pas" for="psw"><img id="password_img" src="public/img/password.png" alt=""></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+
+        <div class="user_login">
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Запомнить
+          </label>
+          <button class="log_button" type="submit">Войти</button>
+        </div>
+
+        <div class="nav">
+          <span class="signIn" onclick="document.getElementById('id02').style.display='none';
+            document.getElementById('id01').style.display='block'">
+            <a href="#">Регистрация</a>
+          </span>
+          <span class="forgotPass"><a href="#">Забыли пароль?</a></span>
+        </div>
+
+        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+
+  <footer class="footer">
+
+  </footer>
+
+  <script src="public/js/main.js"></script>
+</body>
+
+</html>

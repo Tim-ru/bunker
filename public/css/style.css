@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url("../img/bg.jpg");
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(58, 58, 58, 0.0);
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(205, 38, 38);
+    margin: 10px;
+}
+
+.reg, .login, .log_button {
+    background-color: rgba(58, 58, 58, 0.5);
+    display: relative;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.reg:hover, .login:hover, .log_button:hover {
+    transition: .4s;
+    border: 2px solid #ffffff;
+    color: rgb(205, 38, 38);
+}
+
+.button_text {
+    margin: 0  20px;
+}
+
+/* intro */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgb(75, 75, 75);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    padding: 20px;
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid #f1c40f;
+    background-color: rgba(58, 58, 58);
+    color: #f1c40f;
+}
+
+.cancelbtn:hover {
+    border: 2px solid #ffffff;
+    background-color: rgb(46, 46, 46);
+    transition: 0.3s;
+    color: rgb(205, 38, 38);
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 10px 0 10px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+form .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60%;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.username, .password {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.username input, .password input {
+    padding: 10px;
+    border: 2px solid rgb(86, 86, 86);
+    background-color: rgb(56, 56, 56);
+    color: rgb(17, 180, 163);
+    width: 100%;
+
+}
+
+.username input:focus, .password input:focus {
+    padding: 10px;
+    border: 2px solid rgb(17, 180, 163);
+    background-color: rgb(56, 56, 56);
+    color: rgb(17, 180, 163);
+}
+
+#password_img, #user_img {
+    height: 35px;
+}
+
+#lab, #pas {
+    background-color: rgb(86, 86, 86);
+    border: 0;
+}
+
+.user_login {
+    background-color: rgb(86, 86, 86);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f1c40f;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.nav a {
+    color: rgb(162, 163, 163);
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.auth {
+    display: block;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
