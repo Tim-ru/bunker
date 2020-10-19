@@ -1,6 +1,8 @@
 <?php
 require_once ('db/DB.php');
 require_once ('user/User.php');
+require_once ('chat/Chat.php');
+require_once ('game/Game.php');
 
 class Application {
     function __construct(){
