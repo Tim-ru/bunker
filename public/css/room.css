@@ -1,0 +1,225 @@
+span {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.gameMain {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url('../img/room.png');
+    font-size: 32px;
+    display: none;
+}
+
+.gameNav {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    
+    background:linear-gradient(0deg, rgba(234,229,201,0.3) 0%, rgba(108,198,203,0.3) 100%);
+    margin-right: 10px;
+}
+
+.gameProfile {
+    font-weight: 600;
+    font-size: 35px;
+    width: 100%;
+    height: 8%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    z-index: 1;
+}
+
+.gameAvatar:hover {
+    background-color: rgb(0, 255, 255);
+    opacity: 0.7;
+}
+
+.gameName {
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+/* chat */
+
+.chat {
+    width: 100%;
+    height: 84%;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-elements {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat-input {
+    background-color: rgb(22, 22, 22);
+    color: #00c6ff;
+    outline: none;
+    border: none;
+    padding: 12px 10px;
+    width: 100%;
+}
+
+#send-message {
+    cursor: pointer;
+    outline: none;
+    color: #00c6ff;
+    background-color: rgb(22, 22, 22);
+    border: 0;
+}
+
+.cate {
+    animation: anim1 .5s linear;
+}
+
+@keyframes anim1{
+    0% {
+        opacity: 100%;
+    }
+
+    40% {
+        transform: translateX(500%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateX(-500%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.slide_top {
+    background: rgba(0, 255, 255, 0.356);
+    width: 100%;
+    color: rgb(0, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding: 5px 10px;
+    margin: 5px 0;
+    bottom: 1;
+    color: #fff;
+    animation: disappear .6s linear;
+}
+
+@keyframes disappear{
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+}
+
+.no-touch {
+    animation: anim2 .4s linear;
+}
+
+@keyframes anim2{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message {
+    background: rgba(0, 255, 255, 0.356);
+    width: 100%;
+    color: rgb(0, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    padding: 5px 10px;
+    margin: 5px 0;
+    color: #fff;
+    animation: appearance .5s linear;
+    z-index: 2222;
+}
+
+.fall {
+    transform: translateY(-4rem);
+    opacity: 0;
+}
+
+@keyframes appearance{
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.chat-field {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8%;
+    background-color: rgba(22, 22, 22, 0.541)
+}
+
+.menu a {
+    cursor: pointer;
+    color: #00c6ff;
+    padding: 10px 20px;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .2s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #00C6FF;
+}
+
+.menu a:hover {
+    background-position: 0 0;
+    color:#fff;
+}
+
+.game {
+    height: 100vh;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.game_main {
+    width: 100%;
+    height: 92%;
+    background-color: rgba(31, 34, 204, 0.35);
+}
+
+.game_items {
+    height: 8%;
+    background-color: rgba(31, 177, 109, 0.541);
+}
+

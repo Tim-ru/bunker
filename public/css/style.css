@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* header */
+
+.main {
+    position: relative;
+    background: url("../img/bg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: block;
+    height: 130vh;
+    width: 100%;
+    top: 0;
+    left: 0; 
+    clip-path: circle(210vh at 50% -80vh); 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(205, 38, 38);
+    margin: 10px;
+    
+}
+
+.reg, .login{
+    cursor: pointer;
+    background-color: rgba(58, 58, 58, 0.5);
+    display: relative;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.reg:hover, .login:hover, .log-button:hover {
+    transition: .4s;
+    border: 2px solid #ffffff;
+    color: rgb(205, 38, 38);
+}
+
+.button-text {
+    margin: 0  20px;
+}
+
+.mainProfileNav {
+    display: none;
+}
+
+.mainProfile {
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mainAvatar {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(0, 255, 255);
+    opacity: 1;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.gameAvatar, .profileAvatar, .mainAvatar {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    background-image: url('/public/img/avatar.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.mainAvatar:hover {
+    opacity: 0.7;
+}
+
+.mainName {
+    text-transform: capitalize;
+    text-shadow: rgb(0, 0, 0) 1px 1px 0, rgb(0, 0, 0) -1px -1px 0, 
+                 rgb(0, 0, 0) -1px 1px 0, rgb(0, 0, 0) 1px -1px 0;
+}
+
+/* intro */
+
+/*Start Game Button */
+
+.content {
+    font-size: 60px;
+    font-weight: 900;
+    height: 600px;
+}
+
+.content a {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 30px 60px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.content a:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, .05);
+}
+
+.content a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,#dafea4, #f254a8);
+    animation: a1 2s linear infinite;
+}
+
+@keyframes a1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.content a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #dafea4, #f254a8);
+    animation: a2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes a2 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.content a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #dafea4, #f254a8);
+    animation: a3 2s linear infinite;
+}
+
+@keyframes a3 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.content a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #dafea4, #f254a8);
+    animation: a4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes a4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.main span.material-icons {
+    color: #fff;
+    font-size: 70px;
+    display: block;
+    text-align: center;
+    cursor: default;
+    animation: bounce 1.5s linear infinite;
+}
+
+/* modal windows */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modalContent {
+    padding: 40px;
+    width: 400px; 
+    border-radius: 10px;
+    background-color: #313131;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.username, .password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.username input, .password input {
+    margin: 10px auto;
+    padding: 14px;
+    border: 2px solid #f1c40f;
+    border-radius: 20px;
+    background: none;
+    color: #B6DEE0;
+    width: 220px;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.user-reg input, .user-log input{
+    font-size: 16px;
+    padding: 14px 40px;
+    margin: 20px auto;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    border: 2px solid #1B8EA1;
+    display: block;
+    background: none;
+    text-align: center;
+    color: #B6DEE0;
+    transition: 0.25s;
+    cursor: pointer;
+    text-transform: none;
+    outline: none;
+}
+
+.user-reg input:hover, .user-log input:hover {
+    background: #1B8EA1;
+    color: black;
+}
+
+.username input:focus, .password input:focus {
+    width: 260px;
+    border: 2px solid #1B8EA1;
+    background-color: rgb(56, 56, 56);
+    outline: none;
+}
+
+#password-img, #user-img {
+    height: 35px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.nav a {
+    color: rgb(162, 163, 163);
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.modalTitle {
+    display: block;
+    font-size: 30px;
+    color: #B6DEE0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Rules */
+.rules {
+    margin-top: 20px;
+    font-family: "Roboto Condensed",sans-serif;
+    background: #000;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+}
+
+.rules .container {
+    text-align: left;
+}
+
+.rulesContent {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.navMenu {
+    max-width: 200px;
+    /* max-height: 200px; */
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.links ul {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+.links ul li {
+    padding: 10px 30px;
+    height: 100%;
+}
+
+.links ul li a{
+    color: #f1c40f;
+}
+
+.links {
+    width: 100%;
+    height: 100%;
+    /* position: fixed;
+    left: 0;
+    right: auto;
+    z-index: 999;
+    top: 0; */
+}
+
+.title {
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.rules h2, .rules h4 {
+    margin: 0;
+    text-align: left;
+    padding: 20px 0;
+    letter-spacing: 1px;
+}
+
+.rules h2 {
+    font-size: 23px;
+}
+
+.rules h4 {
+    padding: 10px 0;
+}
+
+/* bg-animation-icons */
+.icon {
+    position: absolute;
+    width: 300px;
+    height: 550px;
+    top: 1550px;
+    right: 3%;
+    animation: levitation 3s infinite;
+}
+
+@keyframes levitation {
+    0%{
+        transform: translateY(-5%);
+    }
+    50%{
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(-5%);
+    }
+}
+
+/* @media (max-width:1550px) {
+    .torchLeft {
+        display: none;
+    }
+
+    .torchRight {
+        display: none;
+    }
+} */
+

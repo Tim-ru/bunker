@@ -1,0 +1,140 @@
+body {
+    font-family: "Roboto Condensed",sans-serif;
+    color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profileMain {
+    background-image: url('../img/gamebg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    color: #fff;
+}
+
+.profileContainer {
+    max-width: 1500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+
+/* Module Left */
+.moduleLeft {
+    background-color: rgba(12, 12, 14, 0.719);
+    padding: 30px;
+    margin-right: 10px;
+    width: 500px;
+    text-align: center;
+}
+
+.profileAvatar {
+    margin: 50px;
+    background-color: aqua;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profileName {
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.profileAbout {
+    margin-top: 10px;
+    width: 600px;
+    font-size: 20px;
+    width: 100%;
+    height: 240px;
+}
+
+.profileNav {
+    position: relative;
+    bottom: 0;
+    margin-top: 150px;
+}
+
+.backToMenu {
+    cursor: pointer;
+    color:#00c6ff;
+    padding: 10px 20px;
+    width:200px;
+    text-decoration:none;
+    text-align:center;
+    margin: 0 auto 20px auto;
+    display: block;
+    background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .2s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #00C6FF;
+}
+
+.backToMenu:hover {
+    background-position: 0 0;
+    color:#fff;
+}
+
+.backToRoom {
+    cursor: pointer;
+    color:#00c6ff;
+    padding: 10px 20px;
+    width:200px;
+    text-decoration:none;
+    text-align:center;
+    margin:0 auto;
+    display: block;
+    background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all .2s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #00C6FF;
+}
+
+.backToRoom:hover {
+    background-position: 0 0;
+    color:#fff;
+}
+
+/* Module Right */
+.moduleRight {
+    background-color: rgba(12, 12, 14, 0.719);
+    padding: 30px;
+    text-align: center;
+    width: 800px;
+}
+
+.statistic h1{
+    margin-bottom: 20px;
+}
+
+.gameStatistic {
+    width: 100%;
+    font-size: 25px;
+}
+
+.statisticModule {
+    padding: 20px;  
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(177, 13, 13, 0.5);
+}
+
+
+

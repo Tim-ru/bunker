@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunker</title>
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/room.css">
+  <link rel="stylesheet" href="public/css/profile.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+    <div class="container">
+      <div class="header">
+        <div class="header-logo">Bunker</div>
+        <nav class="nav" id="mainNav">
+          <button class="reg" id="reg-button">
+            <span class="button-text">Регистрация</span>
+          </button>
+          <button class="login" id="log-button">
+            <span class="button-text">Вход</span>
+          </button>
+        </nav>
+        <div class="mainProfileNav">
+          <div class="mainProfile">
+            <div class="mainName name">Torrentino</div>
+            <div class="mainAvatar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <a href="#" id="startGame">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Start Game
+      </a>
+    </div>
+    <span class="material-icons">
+      keyboard_arrow_down
+    </span>
+  </div>
+  <div class="rules">
+    <!-- <img src="public/img/.svg" alt="" class="icon"> -->
+    <div class="title">Правила Игры</div>
+    <div class="rulesContent">
+      <!-- <div class="navMenu">
+        <div class="links">
+          <ul>
+            <li><a href="#">Ссылка</a></li>
+            <li><a href="#">Ссылка</a></li>
+            <li><a href="#">Ссылка</a></li>
+            <li><a href="#">Ссылка</a></li>
+            <li><a href="#">Ссылка</a></li>
+          </ul>
+        </div>
+      </div> -->
+      <div class="container">
+        <h2>Введение</h2>
+        Могли бы вы себе представить как это пережить глобальную катастрофу? Думаю что нет... Для этого был создан
+        «Бункер
+        Онлайн!» чтобы вы смогли ощутить как это! Наша игра очень простая, и на изучение правил вам не понадобится много
+        времени! Уже после первой игры вы будете полностью понимать как играть.
+        Так же перед началом игры советуем вам приготовить вкусный чай или кофе, взять печеньки и погрузится с головой в
+        игру!
+        <h2>История</h2>
+        На земле вот-вот произойдет катастрофа, а может уже и началась!
+        Я, как и большинство людей в панике пытаюсь выжить, и найти укрытие, чтобы спасти свою жизнь. В поисках убежища
+        я
+        увидел группу людей, но не знал что делать... Стоит подойти к ним или нет, ведь опасность сейчас на каждом шагу!
+        Но так как терять было нечего я решил пойти к ним...
+        Как только я начал подходить к людям, я понял, что мне невероятно повезло — все эти люди находились возле
+        бункера
+        на который была последняя надежда!
+        Как оказалось они ждут людей, которым все еще удалось выжить, и разбили временный лагерь...
+        Приняли меня хорошо, но что меня ждет дальше мне было не известно. Все что я понимал, так это то, что предстоит
+        решить, кто действительно заслуживает попасть в бункер, чтобы остаться в живых. Тех, кто не попадет - ждет
+        верная
+        смерть.
+        И тут началась моя история выживания...
+        <h2>Обзор</h2>
+        <h4>Катаклизм</h4>
+        Описание текущего для игры катаклизма. Как это произошло, что случилось и четкое понимание того, с чем связаны
+        проблемы, что даст вам понять в процессе игры кто среди людей вам подходит, а кого нужно выгнать.
+
+        <h4>Бункер</h4>
+        Описание найденного бункера. Единственный шанс, чтобы выжить в случае катаклизма - это попасть в бункер. У вас
+        есть информация о времени его постройки, местонахождении и данные о спальных комнатах.
+        Так же вам доступна следующая информация:
+        - Размер бункера — общая площадь убежища.
+        - Время нахождения — сколько вам потребуется времени, чтобы пережить катастрофу.
+        - Количество еды — запас продуктов, которых вам должно хватить на период пребывания в бункере. В случае, если
+        продуктов недостаточно или отсутствуют совсем, игроки будут вынуждены выходить из бункера во время катастрофы,
+        чтобы добыть пищу.
+        - В бункере имеется — те вещи, которые находятся внутри бункера и которые могут быть полезны при выживании.
+        В зависимости от того, что находится в бункере, вам так же предстоит определить кто из выживших будет более
+        полезен, учитывая данные обстоятельства.
+      </div>
+    </div>
+  </div>
+
+  <!-- Окно регистрации -->
+
+  <div id="modal-reg" class="modal">
+    <div class="modalContent animate">
+      <span class="modalTitle">Регистрация</span>
+      <div class="container">
+        <div class="username">
+          <input id="name" type="text" placeholder="Enter Name" required>
+        </div>
+
+        <div class="username">
+          <input id="reg-login" type="text" placeholder="Enter Username" required>
+        </div>
+
+        <div class="password">
+          <input id="reg-password" type="password" placeholder="Enter Password" required>
+        </div>
+
+        <div class="user-reg">
+          <input class="reg-button" type="submit" value="Регистрация">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Окно авторизации -->
+  <div id="modal-log" class="modal">
+    <div class="modalContent animate">
+      <span class="modalTitle">Авторизация</span>
+      <div class="container">
+        <div class="username">
+          <input id="login" type="text" placeholder="Enter Username" name="uname" required>
+        </div>
+
+        <div class="password">
+          <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+        </div>
+
+        <div class="user-log">
+          <input id="user-login-btn" type="submit" value="Вход">
+        </div>
+
+        <div class="nav" id="reg-prompt">
+          <span class="sign-in">
+            <a href="#">Регистрация</a>
+          </span>
+          <span class="forgotPass"><a href="#">Забыли пароль?</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME -->
+
+  <div class="gameMain">
+    <nav class="gameNav">
+      <div class="gameProfile">
+        <div class="gameAvatar" id="avatar"><img src="" alt=""></div>
+        <div class="gameName name">Torrentino</div>
+      </div>
+      <div class="chat">
+        <div class="chat-field"></div>
+        <div class="chat-elements">
+          <input id="chat-input" type="text" placeholder="Your message...">
+          <button id="send-message" class="send-message">
+            <span class="material-icons" id="send-btn">
+              send
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="menu">
+        <a id="menuButton">Выйти</a>
+      </div>
+    </nav>
+    <div class="game">
+      <div class="game_main">
+        <div class="inner">
+          game_main
+        </div>
+      </div>
+      <div class="game_items">
+        game_items
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+
+  <div class="profileMain">
+    <div class="profileContainer">
+      <div class="moduleLeft">
+        <div class="profileAvatar">
+          <img src="" alt="">
+        </div>
+        <div class="profileAbout">
+          <div class="profileName name">Torrentino</div>
+          <div class="about">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea earum magni error
+            quibusdam quod, quis numquam praesentium quaerat rerum optio. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quis eum eveniet voluptate beatae praesentium totam illo fugit quo
+            porro explicabo?</div>
+          <div class="profileNav">
+            <a href="#" class="backToMenu" id="backToMenu">Выйти в меню</a>
+            <a href="#" class="backToRoom" id="backToRoom">Назад</a>
+          </div>
+        </div>
+      </div>
+      <div class="moduleRight">
+        <div class="statistic">
+          <h1>Статистика игрока</h1>
+          <div class="gameStatistic">
+            <div class="statisticModule">
+              <div id="gameCounter">Количество сыгранных игр</div>
+              <div id="gameCounterValue">8</div>
+            </div>
+            <div class="statisticModule">
+              <div id="gameWin">Количество выигранных игр</div>
+              <div id="gameWin">22</div>
+            </div>
+
+            <div class="statisticModule">
+              <div>Любимая роль</div>
+              <div>Убийца-Свин</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+
+  </footer>
+
+  <script src="public/js/Server.js"></script>
+  <script src="public/js/main.js"></script>
+  <script src="public/js/room.js"></script>
+  <script src="public/js/profile.js"></script>
+</body>
+
+</html>
